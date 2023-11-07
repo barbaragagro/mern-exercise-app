@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import workoutRoutes from './routes/workouts.js';
+import userRoutes from './routes/user.js';
 
 dotenv.config();
 
@@ -16,6 +17,8 @@ app.use((req, res, next) => {
 
 app.use('/api/workouts', workoutRoutes);
 
+app.use('/api/user', userRoutes);
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -26,5 +29,3 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
-
-
