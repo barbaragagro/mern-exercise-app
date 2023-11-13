@@ -111,10 +111,11 @@ nav button {
   font-family: 'Poppins';
   cursor: pointer;
   font-size: 1em;
+  margin-left: 10px;
 }
-.nav-buttons{
-    display: flex;
-    flex-wrap: wrap;
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 form.signup,
